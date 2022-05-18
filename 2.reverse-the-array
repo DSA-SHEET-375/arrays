@@ -1,0 +1,10 @@
+https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
+
+def reverseWord(s)
+    return s[::-1]
+    
+def reverseWord(s):
+    reversed_string = ""
+    for i in range(len(s)-1,-1,-1):
+        reversed_string = reversed_string + s[i]
+    return reversed_string
