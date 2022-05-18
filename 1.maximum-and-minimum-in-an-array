@@ -1,0 +1,16 @@
+https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
+
+//in buit function
+def getMinMax( a, n):
+    return min(a),max(a)
+  
+//logic
+def getMinMax( a, n):
+    minval=a[0]
+    maxval=a[0]
+    for i in range(n) :
+        if a[i]>maxval:
+            maxval = a[i]
+        if a[i]<minval:
+            minval=a[i]
+    return minval,maxval
