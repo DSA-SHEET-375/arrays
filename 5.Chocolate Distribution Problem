@@ -1,5 +1,8 @@
 https://practice.geeksforgeeks.org/problems/chocolate-distribution-problem3825/1/#
 
+arr-number of choclates in n packets
+M-select any M such that diff b/w max and min 0f arr should be min
+n-number of packets
 
 class Solution:
 
