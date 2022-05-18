@@ -1,0 +1,13 @@
+https://practice.geeksforgeeks.org/problems/chocolate-distribution-problem3825/1/#
+
+
+class Solution:
+
+    def findMinDiff(self, arr,n,M):
+
+        # code here
+        arr.sort()
+        min_diff = arr[n-1] - arr[0]
+        for i in range(len(arr) - M + 1):
+            min_diff = min(min_diff ,  arr[i + M - 1] - arr[i])
+        return min_diff
