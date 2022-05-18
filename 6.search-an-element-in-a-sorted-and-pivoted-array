@@ -1,0 +1,17 @@
+https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
+
+class Solution:
+    def search(self, arr : list, l : int, h : int, key : int):
+        # Complete this function
+        if l > h:
+            return -1
+        mid = (l + h) // 2
+        if arr[mid] == key:
+            return mid
+        if arr[l] <= arr[mid]:
+            if key >= arr[l] and key <= arr[mid]:
+                return self.search(arr, l, mid-1, key)
+            return self.search(arr, mid + 1, h, key)
+        if key >= arr[mid] and key <= arr[h]:
+            return self.search(arr, mid + 1, h, key)
+        return self.search(arr, l, mid-1, key)
